@@ -1,0 +1,74 @@
+/* 
+ * Global styles for St. Paul UCC
+ * 
+ * Note: The Webflow CSS files (normalize.css, components.css, st-paul-ucc.css)
+ * are loaded via <link> tags in layout.tsx to ensure proper loading order
+ * and compatibility with Next.js build process.
+ */
+
+/* Compress navigation for medium-sized screens to prevent wrapping */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .nav-link {
+    font-size: 12px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Mobile menu fixes - ensure nav links stack vertically when menu is open */
+@media screen and (max-width: 991px) {
+  .w-nav[data-collapse="medium"] .w-nav-menu[data-nav-menu-open] {
+    display: block !important;
+  }
+  
+  .w-nav[data-collapse="medium"] .w-nav-menu[data-nav-menu-open] .nav-link {
+    display: block !important;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .w-nav[data-collapse="medium"] .w-nav-menu[data-nav-menu-open] .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-nav[data-collapse="small"] .w-nav-menu[data-nav-menu-open] {
+    display: block !important;
+  }
+  
+  .w-nav[data-collapse="small"] .w-nav-menu[data-nav-menu-open] .nav-link {
+    display: block !important;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .w-nav[data-collapse="small"] .w-nav-menu[data-nav-menu-open] .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .w-nav[data-collapse="tiny"] .w-nav-menu[data-nav-menu-open] {
+    display: block !important;
+  }
+  
+  .w-nav[data-collapse="tiny"] .w-nav-menu[data-nav-menu-open] .nav-link {
+    display: block !important;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .w-nav[data-collapse="tiny"] .w-nav-menu[data-nav-menu-open] .nav-link:last-child {
+    border-bottom: none;
+  }
+}
